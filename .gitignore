@@ -1,3 +1,7 @@
+# common
+.tmp/*
+*outputs.txt
+
 # Local .terraform directories
 **/.terraform/*
 

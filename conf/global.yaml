@@ -1,0 +1,5 @@
+---
+main_dns_domain:
+  name:        simple-site1
+  dns_name:    simple-site1.com.
+  description: Simple DNS zone
