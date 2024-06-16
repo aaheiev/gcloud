@@ -29,14 +29,11 @@ jobs:
           COMMIT_SHA=${{ github.event.pull_request.base.sha }}
           COMMIT_SHA_SHORT=$(echo ${COMMIT_SHA::8})
           IAC_IMAGE_VERSION=$(cat $DOCKER_PATH/.version)
-          echo "IAC_IMAGE_VERSION = $IAC_IMAGE_VERSION"
           echo "COMMIT_TAG=$(echo $COMMIT_SHA_SHORT)" >> $GITHUB_ENV
-          echo "COMMIT_TAG=$(echo $COMMIT_SHA_SHORT)"
           TERRAFORM_VERSION=$(cat .terraform-version)
           echo "TERRAFORM_VERSION=$(echo $TERRAFORM_VERSION)" >> $GITHUB_ENV
           IMAGE_TAG="${IAC_IMAGE_VERSION}.${GITHUB_RUN_NUMBER}"
-          echo "IMAGE_TAG = ${IMAGE_TAG}"
-          echo "IMAGE_TAG = ${IMAGE_TAG}" >> $GITHUB_ENV
+          echo "IMAGE_TAG=$(echo IMAGE_TAG)" >> $GITHUB_ENV
 
       - name: Show config
         id: show-config
