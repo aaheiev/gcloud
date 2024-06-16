@@ -1,5 +1,6 @@
 # common
 .tmp/*
+.idea/*
 *outputs.txt
 
 # Local .terraform directories

@@ -1,0 +1,17 @@
+---
+name: Develop
+
+on:
+  push:
+    branches:
+      - develop
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+#    outputs:
+#      version: ${{ steps.config.outputs.VERSION }}
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout code
