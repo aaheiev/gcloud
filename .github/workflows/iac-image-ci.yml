@@ -30,11 +30,11 @@ jobs:
           COMMIT_SHA_SHORT=$(echo ${COMMIT_SHA::8})
           IAC_IMAGE_VERSION=$(cat $DOCKER_PATH/.version)
           echo "IAC_IMAGE_VERSION = $IAC_IMAGE_VERSION"
-#          IMAGE_TAG=""
           echo "COMMIT_TAG=$(echo $COMMIT_SHA_SHORT)" >> $GITHUB_ENV
           echo "COMMIT_TAG=$(echo $COMMIT_SHA_SHORT)"
           TERRAFORM_VERSION=$(cat .terraform-version)
           echo "TERRAFORM_VERSION=$(echo $TERRAFORM_VERSION)" >> $GITHUB_ENV
+#          IMAGE_TAG=""
 
       - name: Show config
         id: show-config
