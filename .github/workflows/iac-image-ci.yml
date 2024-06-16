@@ -9,7 +9,7 @@ on:
       - develop
 
 env:
-  IMAGE_REPO_NAME: gcloud-infra/iac-base
+  IMAGE_REPO_NAME: iac-base
   DOCKER_PATH: docker/base
 
 jobs:
