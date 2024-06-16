@@ -34,7 +34,8 @@ jobs:
           echo "COMMIT_TAG=$(echo $COMMIT_SHA_SHORT)"
           TERRAFORM_VERSION=$(cat .terraform-version)
           echo "TERRAFORM_VERSION=$(echo $TERRAFORM_VERSION)" >> $GITHUB_ENV
-#          IMAGE_TAG=""
+          IMAGE_TAG="${IAC_IMAGE_VERSION}.${{ GITHUB_RUN_NUMBER }}"
+          echo "IMAGE_TAG = ${IMAGE_TAG}"
 
       - name: Show config
         id: show-config
