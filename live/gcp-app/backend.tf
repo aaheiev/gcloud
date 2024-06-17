@@ -2,6 +2,6 @@
 terraform {
   backend "gcs" {
     bucket = "infrastructure2023"
-    prefix = "gcloud-infra/gcp-app"
+    prefix = "gcloud-infra/live/gcp-app"
   }
 }
