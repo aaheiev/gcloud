@@ -2,6 +2,6 @@
 terraform {
   backend "gcs" {
     bucket = "infrastructure2023"
-    prefix = "gcloud-infra/shared"
+    prefix = "gcloud-infra/gcp-storage"
   }
 }

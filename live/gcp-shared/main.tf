@@ -2,7 +2,7 @@ locals {
   labels = {
     managed_by = "terraform"
     project    = "gcloud-infra"
-    layer      = "shared"
+    layer      = "gcp-shared"
   }
   environment_name = terraform.workspace
 }

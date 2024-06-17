@@ -1,4 +1,4 @@
-variable "gcloud_progect" {
+variable "gcloud_project" {
   type        = string
   description = "Main GCP project"
 }
