@@ -1,18 +1,4 @@
-locals {
-  labels = {
-    managed_by = "terraform"
-    project    = "gcloud-infra"
-    layer      = "gcp-shared"
-  }
-  environment_name = terraform.workspace
-}
-
-module "config" {
-  source           = "../../modules/config"
-  environment_name = local.environment_name
-  config_path      = "${path.root}/../../conf"
-}
-
+/*
 resource "google_dns_managed_zone" "main" {
   name        = module.config.global["main_dns_domain"]["name"]
   dns_name    = module.config.global["main_dns_domain"]["dns_name"]
@@ -40,3 +26,4 @@ resource "google_dns_managed_zone" "main" {
 output "main_dns_zone_name" {
   value = google_dns_managed_zone.main.name
 }
+*/
