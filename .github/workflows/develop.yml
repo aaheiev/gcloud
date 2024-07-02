@@ -30,3 +30,9 @@ jobs:
       - name: Login to gcr
         run: |
           gcloud auth configure-docker europe-west4-docker.pkg.dev
+
+      - name: Publish image
+        run: |
+          docker pull nginx
+          docker tag nginx europe-west4-docker.pkg.dev/aaheiev-335511/gcloud71
+          docker push europe-west4-docker.pkg.dev/aaheiev-335511/gcloud71
