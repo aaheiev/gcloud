@@ -8,7 +8,7 @@ on:
 env:
   IMAGE_REPO_NAME: iac-base
   DOCKER_PATH: docker/base
-
+  GCLOUD_LOCATION:
 jobs:
 
   build:
@@ -26,3 +26,7 @@ jobs:
         name: Login Google Cloud
         with:
           credentials_json: ${{ secrets.CI_PRIVATE_KEY }}
+
+      - name: Login to gcr
+        run: |
+          gcloud auth configure-docker europe-west4-docker.pkg.dev

@@ -9,7 +9,7 @@ locals {
 
 resource "google_artifact_registry_repository" "artifact_registry" {
   location      = var.gcloud_region
-  repository_id = "gicrepo"
+  repository_id = local.gcr_repo_name
   description   = "container registry repository"
   format        = "DOCKER"
   #   docker_config {
