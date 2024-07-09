@@ -26,5 +26,5 @@ variable "github_org_name" {
 
 variable "github_repo_name" {
   type    = string
-  default = "gcloud-infra"
+  default = "gcloud"
 }

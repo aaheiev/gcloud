@@ -2,6 +2,6 @@
 terraform {
   backend "gcs" {
     bucket = "infrastructure2023"
-    prefix = "live/shared"
+    prefix = "live/applications"
   }
 }

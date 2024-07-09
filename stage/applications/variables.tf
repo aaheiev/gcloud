@@ -1,0 +1,16 @@
+variable "gcloud_project" {
+  type        = string
+  description = "Main GCP project"
+}
+
+variable "gcloud_region" {
+  type        = string
+  description = "Main GCP region"
+  default     = "europe-west4"
+}
+
+variable "gcloud_regions" {
+  type        = list(string)
+  description = "Lost of GCP regions"
+  default     = ["europe-west4"]
+}
